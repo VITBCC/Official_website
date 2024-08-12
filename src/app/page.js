@@ -8,6 +8,9 @@ export default function Home() {
       <Landing />
       <TechStack />
       <OurWorks />
+      <ChooseUs />
+      <HowItWork />
+      {/* <Testimonals /> */}
     </div>
   );
 }
