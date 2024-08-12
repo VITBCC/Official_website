@@ -72,7 +72,7 @@ const ReviewCard = ({
 
 export default function TechStack() {
     return (
-        <div className="bg-black text-white w-screen pb-16 font-mono">
+        <div className="bg-black text-white w-screen pb-16 font-mono pt-10">
             <div className="flex md:flex-row flex-col justify-around p-6 items-center md:gap-0 gap-6">
                 <div className="text-2xl font-bold flex flex-col gap-y-2">
                     Increase your work <br/><span className="text-3xl">productivity by 200x.</span>
