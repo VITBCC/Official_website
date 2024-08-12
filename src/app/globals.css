@@ -1,4 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+.bg-gradient {
+    background-color: black;
+    background: 
+    radial-gradient(circle at bottom left, rgba(239, 147, 100, 1), black,black,black,transparent),
+    radial-gradient(circle at top right,rgba(139, 123, 207, 1), black ,black,black,transparent);
+    background-blend-mode: screen;
+    /* background-size: 18rem 15rem; */
+    background-repeat: no-repeat;
+    background-position: bottom left, top right;
+}
+.continued-bg-gradient{
+    background: radial-gradient(circle at top left,rgba(239, 147, 100, 1) black ,black,black,transparent);;
+}
+.text-gradient{
+    background: -webkit-linear-gradient(rgba(239, 147, 100, 1),rgba(139, 123, 207, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

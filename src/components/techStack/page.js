@@ -51,9 +51,8 @@ const ReviewCard = ({
     return (
         <figure
             className=
-
             // dark styles
-            "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 border-white-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+            "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 border-white-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15] continued-bg-gradient"
 
         >
             <div className="flex flex-row items-center gap-2">
