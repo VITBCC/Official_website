@@ -1,6 +1,11 @@
 import React from "react";
 import { MagicCard } from "../magicui/magic-card";
 import { AiFillProject } from "react-icons/ai";
+import { MdDashboardCustomize } from "react-icons/md";
+import { GoVersions } from "react-icons/go";
+import { SiInsta360 } from "react-icons/si";
+import { MdChildFriendly } from "react-icons/md";
+import { MdQuickreply } from "react-icons/md";
 
 const obj = [
     {
@@ -11,31 +16,31 @@ const obj = [
     },
     {
         id: 2,
-        image: "",
+        image: <MdDashboardCustomize />,
         title: "Customizable Project Setup",
         desc: "Easily customize project settings with a pop-up for naming, descriptions, and privacy options before deployment."
     },
     {
         id: 3,
-        image: "",
+        image: <GoVersions />,
         title: "Integrated Version Control with GitHub",
         desc: "Automatically publish your projects to GitHub, enabling secure version control and easy collaboration.",
     },
     {
         id: 4,
-        image: "",
+        image: <SiInsta360 />,
         title: "Instant Deployment to Vercel",
         desc: "After publishing on GitHub, your project is immediately live on Vercel, optimized for performance and scalability.",
     },
     {
         id: 5,
-        image: "",
+        image: <MdChildFriendly />,
         title: "User-Friendly Interface",
         desc: "An intuitive interface ensures quick and confident deployment, even for users with minimal technical experience.",
     },
     {
         id: 6,
-        image: "",
+        image: <MdQuickreply />,
         title: "Efficiency and Time-Saving",
         desc: "Streamline deployment and save time, letting you focus more on development and less on logistics."
     }
@@ -45,7 +50,9 @@ const Card = ({ item }) => {
     return (
         <MagicCard key={item.id} className="border border-solid bg-transparent text-white border-white pt-6 pb-6 pl-3 pr-6 flex flex-col items-start w-80 min-h-60 rounded-lg" gradientColor={"#D9D9D955"}>
             <div className="space-y-3">
-                <img src={item.image} alt={item.title} />
+                <div className="text-2xl text-yellow-500">
+                    {item.image}
+                </div>
                 <h2 className="font-bold">{item.title}</h2>
                 <p className="font-thin text-sm">{item.desc}</p>
             </div>

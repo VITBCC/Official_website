@@ -8,13 +8,13 @@ import {
 } from "@/components/ui/accordion"
 export default function HowItWork() {
     return (
-        <div className="w-full bg-[#110F0F] flex flex-row items-center justify-around text-white p-6 font-mono">
-            <div className="w-1/2 space-y-6">
+        <div className="md:w-full w-screen bg-[#110F0F] flex md:flex-row flex-col items-center justify-around text-white p-6 font-mono">
+            <div className="w-screen md:w-1/2 space-y-6 md:p-0 p-3 ">
                 <div className="font-bold text-4xl">
                     How It Works?
                 </div>
                 <div>
-                    <Accordion type="single" collapsible className="w-full space-y-3">
+                    <Accordion type="single" collapsible className="w-full space-y-3 ">
                         <AccordionItem value="item-1">
                             <AccordionTrigger>Connect your GitHub and Vercel account.</AccordionTrigger>
                             <AccordionContent>
@@ -42,7 +42,7 @@ export default function HowItWork() {
                     </Accordion>
                 </div>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2 w-screen">
                 <AnimatedBeamMultipleOutputDemo />
             </div>
 
