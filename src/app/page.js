@@ -6,16 +6,18 @@ import ChooseUs from "@/components/whyUs/page";
 import HowItWork from "@/components/working/page";
 import Reviews from "@/components/reviews/page";
 import Navbar from "@/components/navbar/Navbar";
+import JoinUs from "@/components/joinOurTeam/page";
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center h-full">
-      <Navbar/>
+      <Navbar />
       <Landing />
       <TechStack />
       <OurWorks />
       <ChooseUs />
       <HowItWork />
       <Reviews />
+      <JoinUs />
     </div>
   );
 }

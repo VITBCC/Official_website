@@ -95,7 +95,7 @@ export default function Reviews() {
                             slidesPerView: 3, // 3 slides per view
                         },
                     }}
-                    
+
                     navigation={{
                         prevEl: prevRef.current,
                         nextEl: nextRef.current,
