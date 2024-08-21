@@ -31,8 +31,8 @@ function SecretUpload({ onFileUpload }) {
   return (
     <div
       {...getRootProps()}
-      className={`p-4 border-2 border-dashed rounded-lg h-48 text-center flex flex-col gap-y-4 justify-center items-center ${
-        isDragActive ? 'bg-blue-100' : 'bg-gray-100'
+      className={`p-4 border-2 border-dashed rounded-lg h-52 text-center flex flex-col gap-y-4 justify-center items-center ${
+        isDragActive ? 'bg-blue-100' : 'bg-zinc-900'
       }`}
     >
       <input {...getInputProps()} />
