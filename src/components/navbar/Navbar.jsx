@@ -1,11 +1,19 @@
 // components/Navbar.js
 "use client";
 import React from "react";
+import { useRouter } from "next/navigation"; // Import the router hook
 
 const Navbar = () => {
-  async function handleClick() {
-    // Redirect the user to GitHub's OAuth URL
-    window.location.href = "http://localhost:8002/api/v1/users/auth";
+  const router = useRouter(); // Use the router hook
+
+  function handleClick() {
+    // Navigate to the Login page
+    router.push("/Login"); // This will redirect to src/app/Login
+  }
+
+  function handleClickLeaderboard() {
+    // Navigate to the Login page
+    router.push("/Leaderboard"); // This will redirect to src/app/Login
   }
 
   return (
@@ -15,28 +23,26 @@ const Navbar = () => {
           <span className="text-xl font-semibold text-gradient">BCC-VIT</span>
         </div>
         <div className="hidden md:flex space-x-8">
-          <div className="group relative">
-            <button className="hover:text-gray-400 lg:p-2">Club</button>
-            <div className="absolute left-0 mt-2 hidden w-48 bg-white text-black shadow-md group-hover:block">
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200">
-                Events
-              </a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200">
-                Leaderboard
-              </a>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-200">
-                Projects
-              </a>
-            </div>
-          </div>
+          <button href="#" className="hover:text-gray-400 lg:p-2">
+            Resources
+          </button>
+          <a href="#" className="hover:text-gray-400 lg:p-2">
+            Events
+          </a>
           <a
             href="#"
             className="whitespace-pre-wrap text-center lg:p-2 rounded-full bg-[#FFA800]"
           >
             Hackathon
           </a>
+          <button
+            onClick={handleClickLeaderboard}
+            className="hover:text-gray-400 lg:p-2"
+          >
+            Leaderboard
+          </button>
           <a href="#" className="hover:text-gray-400 lg:p-2">
-            Resources
+            Projects
           </a>
         </div>
         <button
