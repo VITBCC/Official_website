@@ -50,3 +50,8 @@ body {
     text-wrap: balance;
   }
 }
+.leader {
+  background-image: url("/union.svg"); /* Remove "/public" */
+  background-repeat: no-repeat;
+  background-size: cover;
+}

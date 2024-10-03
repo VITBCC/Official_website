@@ -1,6 +1,7 @@
 // components/Navbar.js
 "use client";
 import React from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation"; // Import the router hook
 
 const Navbar = () => {
@@ -11,10 +12,10 @@ const Navbar = () => {
     router.push("/Login"); // This will redirect to src/app/Login
   }
 
-  function handleClickLeaderboard() {
-    // Navigate to the Login page
-    router.push("/Leaderboard"); // This will redirect to src/app/Login
-  }
+  // function handleClickLeaderboard() {
+  //   // Navigate to the Login page
+  //   router.push("/Leaderboard"); // This will redirect to src/app/Login
+  // }
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-black bg-opacity-50 text-white z-50">
@@ -29,18 +30,22 @@ const Navbar = () => {
           <a href="#" className="hover:text-gray-400 lg:p-2">
             Events
           </a>
-          <a
-            href="#"
-            className="whitespace-pre-wrap text-center lg:p-2 rounded-full bg-[#FFA800]"
-          >
-            Hackathon
-          </a>
-          <button
-            onClick={handleClickLeaderboard}
-            className="hover:text-gray-400 lg:p-2"
-          >
-            Leaderboard
-          </button>
+          <Link href="/Hackathon">
+            <button
+              // onClick={handleClickLeaderboard}
+              className="whitespace-pre-wrap text-center lg:p-2 rounded-full bg-[#FFA800]"
+            >
+              Hackathon
+            </button>
+          </Link>
+          <Link href="/Leaderboard">
+            <button
+              // onClick={handleClickLeaderboard}
+              className="hover:text-gray-400 lg:p-2"
+            >
+              Leaderboard
+            </button>
+          </Link>
           <a href="#" className="hover:text-gray-400 lg:p-2">
             Projects
           </a>

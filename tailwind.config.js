@@ -18,6 +18,14 @@ module.exports = {
     },
     extend: {
       keyframes: {
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
+          "70%": { opacity: 1 },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: 0,
+          },
+        },
         "shine-pulse": {
           "0%": {
             "background-position": "0% 0%",
@@ -57,6 +65,7 @@ module.exports = {
       },
       animation: {
         grid: "grid 15s linear infinite ",
+        meteor: "meteor 5s linear infinite",
         backgroundPositionSpin: "background-position-spin 3000ms infinite alternate",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
