@@ -179,7 +179,7 @@ export default function PersistentDrawerLeft() {
                 reverseOrder={false}
             />
             <CssBaseline />
-            <AppBarStyled position="fixed" open={open} sx={{ backgroundColor: '#333' }} className='bg-black bg-opacity-50 font-bold'>
+            <AppBarStyled position="fixed" open={open} className='bg-black bg-opacity-50 font-bold'>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -242,9 +242,10 @@ export default function PersistentDrawerLeft() {
                 </List>
             </Drawer>
             <Main open={open} className='bg-gradient dark flex justify-center items-center'>
+                <Meteors number={40} />
                 <DrawerHeader />
-                <div className="relative overflow-hidden whitespace-pre-wrap flex flex-col h-fit text-center p-8 text-white">
-                    <Meteors number={40} />
+                <div className="relative overflow-hidden whitespace-pre-wrap flex flex-col h-fit text-center p-8 items-center text-white w-screen">
+
                     <h1 className="text-4xl font-bold mb-6">Be Part of the </h1>
                     <SparklesText
                         text="Blockchain Revolution!"
