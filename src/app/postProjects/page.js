@@ -51,8 +51,6 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
             }),
             marginLeft: 0,
         }),
-        background: 'black',
-        minHeight: '100vh', // Full page gradient
     })
 );
 
@@ -175,7 +173,7 @@ export default function PersistentDrawerLeft() {
 
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex' }} className="h-screen">
             <Toaster
                 position="top-right"
                 reverseOrder={false}
@@ -243,9 +241,9 @@ export default function PersistentDrawerLeft() {
                     ))}
                 </List>
             </Drawer>
-            <Main open={open}>
+            <Main open={open} className='bg-gradient dark flex justify-center items-center'>
                 <DrawerHeader />
-                <div className="relative overflow-hidden whitespace-pre-wrap flex flex-col justify-center items-center h-full text-center p-8 bg-gradient dark text-white">
+                <div className="relative overflow-hidden whitespace-pre-wrap flex flex-col h-fit text-center p-8 text-white">
                     <Meteors number={40} />
                     <h1 className="text-4xl font-bold mb-6">Be Part of the </h1>
                     <SparklesText
