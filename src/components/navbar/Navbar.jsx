@@ -9,7 +9,7 @@ const Navbar = () => {
 
   function handleClick() {
     // Navigate to the Login page
-    router.push("/Login"); // This will redirect to src/app/Login
+    router.push("/login"); // This will redirect to src/app/Login
   }
 
   function handleClickLeaderboard() {
@@ -30,12 +30,12 @@ const Navbar = () => {
           <a href="#" className="hover:text-gray-400 lg:p-2">
             Events
           </a>
-          <a
-            href="#"
+          <Link
+            href="/hackathon"
             className="whitespace-pre-wrap text-center lg:p-2 rounded-full bg-[#FFA800]"
           >
             Hackathon
-          </a>
+          </Link>
           <Link href="/leaderboard">
             <button
               onClick={handleClickLeaderboard}
