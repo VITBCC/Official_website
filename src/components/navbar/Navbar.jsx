@@ -1,7 +1,6 @@
 // components/Navbar.js
 "use client";
 import React from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation"; // Import the router hook
 
 const Navbar = () => {
@@ -14,7 +13,7 @@ const Navbar = () => {
 
   function handleClickLeaderboard() {
     // Navigate to the Login page
-
+    router.push("/Leaderboard"); // This will redirect to src/app/Login
   }
 
   return (
@@ -25,7 +24,7 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex space-x-8">
           <button href="#" className="hover:text-gray-400 lg:p-2">
-            Blogs
+            Resources
           </button>
           <a href="#" className="hover:text-gray-400 lg:p-2">
             Events
@@ -36,14 +35,12 @@ const Navbar = () => {
           >
             Hackathon
           </a>
-          <Link href="/leaderboard">
-            <button
-              onClick={handleClickLeaderboard}
-              className="hover:text-gray-400 lg:p-2"
-            >
-              Leaderboard
-            </button>
-          </Link>
+          <button
+            onClick={handleClickLeaderboard}
+            className="hover:text-gray-400 lg:p-2"
+          >
+            Leaderboard
+          </button>
           <a href="#" className="hover:text-gray-400 lg:p-2">
             Projects
           </a>
