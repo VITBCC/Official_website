@@ -24,7 +24,7 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex space-x-8">
           <button href="#" className="hover:text-gray-400 lg:p-2">
-            Resources
+            Blogs
           </button>
           <a href="#" className="hover:text-gray-400 lg:p-2">
             Events
