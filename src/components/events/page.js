@@ -81,10 +81,11 @@ export default function Events() {
             <Link href={`/event/${event._id}`}><EventCard card={event} key={event._id} /></Link>
           ))}
         </div>
-
-        <button className="p-3 text-sm rounded-full text-[#FFA800] border border-solid-2px border-[#FFA800] items-center w-full">
-          View all events.
-        </button>
+        <Link className="mt-10" href={`/event`}>
+          <button  className="p-3 text-sm rounded-full text-[#FFA800] border border-solid-2px border-[#FFA800] items-center w-full">
+            View all events.
+          </button>
+        </Link>
       </div>
     </div>
   );

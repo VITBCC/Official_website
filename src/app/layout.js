@@ -1,7 +1,11 @@
+
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import Navbar from "@/components/navbar/Navbar";
 const inter = Inter({ subsets: ["latin"] });
+
+ 
+import { useRouter } from 'next/navigation'
 
 export const metadata = {
   title: "Create Next App",
@@ -9,6 +13,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const router = useRouter();
+  const noNavbarPaths = ['/login', '/signup','/postProjects'];
+  const shouldHideNavbar = router.pathname === '/postProjects';
   return (
     <html lang="en">
       <head>
@@ -18,7 +25,10 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
 
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      {shouldHideNavbar && <Navbar />}
+        {children}
+        </body>
     </html>
   );
 }

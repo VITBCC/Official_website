@@ -35,7 +35,7 @@ export default function Leaderboard() {
 
     return (
         <div className="bg-gradient-to-bl from-purple-700 to-slate-900 flex flex-col pt-5 justify-between items-center h-screen w-full bg-no-repeat">
-            <h2 className="text-3xl font-bold font-mono bg-gradient-to-bl from-amber-500 via-slate-50 to-yellow-100 bg-clip-text text-transparent">
+            <h2 className="text-3xl mt-16 font-bold font-mono bg-gradient-to-bl from-amber-500 via-slate-50 to-yellow-100 bg-clip-text text-transparent">
                 Top 10 Performers in VIT BCC
             </h2>
             <div className="flex flex-col gap-6 w-[80rem] mt-10">
