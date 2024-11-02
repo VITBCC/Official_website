@@ -54,7 +54,7 @@ export default function Reviews() {
   const [projects, setProjects] = useState([]);
   async function getAllProjects() {
     try {
-      const response = await fetch("http://localhost:8003/api/v1/projects/getProjects");
+      const response = await fetch("https://bcc-backend.vercel.app/api/v1/projects/getProjects");
       const data = await response.json();
       if (data) {
         console.log(data?.data?.projects, "projects");
