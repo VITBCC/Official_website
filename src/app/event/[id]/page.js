@@ -1,4 +1,3 @@
-
 import React from "react";
 import EventCard from "@/components/EventCard";
 import FlickeringGrid from "@/components/ui/flickering-grid";
@@ -37,7 +36,7 @@ const events = [
   },
 ];
 
-const EventsPage = () => {
+export default function EventsPage (){
   return (
     <div className="container mx-auto p-4">
         <FlickeringGrid 
@@ -64,4 +63,3 @@ const EventsPage = () => {
   );
 };
 
-export default EventsPage;

@@ -39,7 +39,7 @@ export default function Leaderboard() {
                 Top 10 Performers in VIT BCC
             </h2>
             <div className="flex flex-col gap-6 w-[80rem] mt-10">
-                {ranking.map((item, index) => (
+                {ranking.slice(0,10).map((item, index) => (
                     <div
                         key={index}
                         className="relative w-full max-w-7xl h-20 rounded-lg bg-gradient-to-bl from-violet-300 to-violet-50 text-black flex items-center justify-between px-5 font-mono overflow-hidden"

@@ -4,11 +4,38 @@ import { cn } from "@/lib/utils";
 import GridPattern from "@/components/magicui/grid-pattern";
 import WordRotate from "../magicui/word-rotate";
 import { useState } from "react";
+import toast, { Toaster } from 'react-hot-toast';
 const Landing = () => {
   const [email, setEmail] = useState("");
 
+
+  async function submit() {
+    const response = await fetch("https://bcc-backend.vercel.app/api/v1/users/ping",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email , purpose : "Notify"}),
+      });
+
+    const data = await response.json();
+
+    if (data?.success) {
+      setEmail("");
+      toast.success(data?.message);
+      
+    } else {
+      toast.error("Something went wrong");
+      console.error("Error uploading project:", error);
+    }
+  }
   return (
     <div className="bg-gradient dark relative flex w-full items-center justify-center overflow-hidden bg-background p-20 md:shadow-xl h-screen">
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
       <div>
         <p className="z-10 whitespace-pre-wrap text-center text-2axl lg:text-5xl m-2 lg:m-5 font-medium tracking-tighter text-black dark:text-white">
           Welcome to
@@ -36,7 +63,7 @@ const Landing = () => {
             placeholder="Email"
             className=" bg-transparent dark:text-white border-separate z-10 whitespace-pre-wrap text-left p-2 lg:p-3 lg:w-96 border-white focus:outline-none focus:border-[#EF9364] border-2 border-spacing-0 rounded-full"
           ></input>
-          <button className="z-10 whitespace-pre-wrap text-center m-2 lg:m-5 p-2 lg:p-4 rounded-full bg-[#FFA800]">
+          <button className="z-10 whitespace-pre-wrap text-center m-2 lg:m-5 p-2 lg:p-4 rounded-full bg-[#FFA800]" onClick={() => submit()}>
             ATTRACT
           </button>
         </div>
