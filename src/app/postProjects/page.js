@@ -113,7 +113,7 @@ export default function PersistentDrawerLeft() {
         }
 
         try {
-            const response = await fetch("http://localhost:8003/api/v1/projects/upload", {
+            const response = await fetch("https://bcc-backend.vercel.app/api/v1/projects/upload", {
                 method: "POST",
                 body: formData // Use formData directly
             });

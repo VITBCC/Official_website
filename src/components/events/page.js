@@ -48,7 +48,7 @@ export default function Events() {
 
   async function getAllEvents() {
     try {
-      const result = await fetch("http://localhost:8003/api/v1/events/getAllEvents");
+      const result = await fetch("https://bcc-backend.vercel.app/api/v1/events/getAllEvents");
       const data = await result.json();
       if (data) {
         const topTwoEvents = data?.data?.events.slice(0, 2);
@@ -77,8 +77,10 @@ export default function Events() {
 
         {/* Replacing paragraph with two cards */}
         <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
-          {events.map((event) => (
-            <Link href={`/event/${event._id}`}><EventCard card={event} key={event._id} /></Link>
+          {events.slice(0,2).map((event) => (
+            <Link href={`/event/${event._id}`} key={event._id}>
+              <EventCard card={event} />
+            </Link>
           ))}
         </div>
 

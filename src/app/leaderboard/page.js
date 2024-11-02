@@ -18,7 +18,7 @@ export default function Leaderboard() {
 
     async function getRankings() {
         try {
-            const response = await fetch("http://localhost:8003/api/v1/score/leaderboard");
+            const response = await fetch("https://bcc-backend.vercel.app/api/v1/score/leaderboard");
             const data = await response.json();
             if (data) {
                 console.log(data?.data?.leaderboardEntries);

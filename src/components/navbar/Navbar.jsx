@@ -24,14 +24,14 @@ const Navbar = () => {
           <span className="text-xl font-semibold text-gradient">BCC-VIT</span>
         </div>
         <div className="hidden md:flex space-x-8">
-          <button href="#" className="hover:text-gray-400 lg:p-2">
+          <button href="Blogs" className="hover:text-gray-400 lg:p-2">
             Blogs
           </button>
-          <a href="#" className="hover:text-gray-400 lg:p-2">
+          <a href="event" className="hover:text-gray-400 lg:p-2">
             Events
           </a>
           <Link
-            href="/hackathon"
+            href="/Hackathon"
             className="whitespace-pre-wrap text-center lg:p-2 rounded-full bg-[#FFA800]"
           >
             Hackathon
@@ -44,9 +44,9 @@ const Navbar = () => {
               Leaderboard
             </button>
           </Link>
-          <a href="#" className="hover:text-gray-400 lg:p-2">
+          <Link href="postProjects" className="hover:text-gray-400 lg:p-2">
             Projects
-          </a>
+          </Link>
         </div>
         <button
           onClick={handleClick}
